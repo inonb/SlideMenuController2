@@ -17,17 +17,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
 
-    CenterViewController *masterViewController = [[CenterViewController alloc] initWithNibName:@"CenterViewController" bundle:nil];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    CenterViewController *centerViewController = [[CenterViewController alloc] initWithNibName:@"CenterViewController" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
 
     MenuViewController *menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     
-    self.slideController = [[SlideMenuController alloc] initWithCenterViewController:self.navigationController];
-    self.slideController.leftViewController = menuViewController;
+    self.slideMenuController = [[SlideMenuController alloc] initWithCenterViewController:self.navigationController];
+    self.slideMenuController.leftViewController = menuViewController;
         
-    self.window.rootViewController = self.slideController;
+    self.window.rootViewController = self.slideMenuController;
     [self.window makeKeyAndVisible];
 
     return YES;

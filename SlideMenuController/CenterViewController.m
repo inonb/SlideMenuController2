@@ -70,10 +70,10 @@
 - (void)menu:(id)sender
 {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (appDelegate.slideController.position == TKSlidePositionCenter) {
-        [appDelegate.slideController presentLeftViewControllerAnimated:YES];
+    if (appDelegate.slideMenuController.position == TKSlidePositionCenter) {
+        [appDelegate.slideMenuController presentLeftViewControllerAnimated:YES];
     } else {
-        [appDelegate.slideController presentCenterViewControllerAnimated:YES];        
+        [appDelegate.slideMenuController presentCenterViewControllerAnimated:YES];        
     }
 }
 
