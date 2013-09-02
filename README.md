@@ -5,15 +5,28 @@ iOS slide menu controller.
 
 ## Usage
 
+### Setup
+In AppDelegate window initializing,
 ``` objective-c
-CenterViewController *centerViewController = [[CenterViewController alloc] initWithNibName:@"CenterViewController" bundle:nil];
-self.navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+SlideMenuController slideMenuController = [[SlideMenuController alloc] initWithCenterViewController:centerViewController];
+slideMenuController.leftViewController = menuViewController;
+// Set window root view or something...
+```
 
-MenuViewController *menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+### Menu Slide
+``` objective-c
+[slideMenuController presentLeftViewControllerAnimated:YES]; // Show Left
+[slideMenuController presentCenterViewControllerAnimated:YES]; // Show Center
+[slideMenuController presentRightViewControllerAnimated:YES]; // Show Right
+```
 
-self.slideController = [[SlideMenuController alloc] initWithCenterViewController:self.navigationController];
-self.slideController.leftViewController = menuViewController;
-    
-self.window.rootViewController = self.slideController;
-[self.window makeKeyAndVisible];
+### Option
+Draggable
+``` objective-c
+slideMenuController.draggable = YES;
+```
+
+Tap to slide
+``` objective-c
+slideMenuController.tapToSlide = YES;
 ```
