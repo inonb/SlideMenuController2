@@ -675,14 +675,8 @@ BOOL IsLandscape(UIInterfaceOrientation orientation);
 
 #pragma mark - Rotation
 
-//- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
-//{
-//}
-
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    NSLog(@"DidAnimateRotationToInterfaceOrientation");
-
     CGRect frame;
 
     if (self.leftViewController) {
