@@ -8,7 +8,8 @@ iOS slide menu controller.
 ### Setup
 In AppDelegate window initializing,
 ``` objective-c
-SlideMenuController slideMenuController = [[SlideMenuController alloc] initWithCenterViewController:centerViewController];
+SlideMenuController slideMenuController = [[SlideMenuController alloc] 
+                                            initWithCenterViewController:centerViewController];
 slideMenuController.leftViewController = menuViewController;
 // Set window root view or something...
 ```
