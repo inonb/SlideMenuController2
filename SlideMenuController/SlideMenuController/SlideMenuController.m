@@ -695,7 +695,7 @@ BOOL IsLandscape(UIInterfaceOrientation orientation);
 
 #pragma mark - View Bounds
 
-BOOL IsLandscape(orientation)
+BOOL IsLandscape(UIInterfaceOrientation orientation)
 {
     return ((orientation) == UIInterfaceOrientationLandscapeLeft || (orientation) == UIInterfaceOrientationLandscapeRight);
 }
